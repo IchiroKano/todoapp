@@ -53,7 +53,7 @@ function TodoListCard() {
         <React.Fragment>
             <AddItemForm onNewItem={onNewItem} />
             {items.length === 0 && (
-                <p className="text-center">ToDoタスクがありません。タスクを追加してください。</p>
+                <p className="text-center">死ぬまでにやりたい101の夢を追加してください。</p>
             )}
             {items.map(item => (
                 <ItemDisplay
@@ -96,7 +96,7 @@ function AddItemForm({ onNewItem }) {
                     value={newItem}
                     onChange={e => setNewItem(e.target.value)}
                     type="text"
-                    placeholder="新しいタスク"
+                    placeholder="新しい夢"
                     aria-describedby="basic-addon1"
                 />
                 <InputGroup.Append>
@@ -106,7 +106,7 @@ function AddItemForm({ onNewItem }) {
                         disabled={!newItem.length}
                         className={submitting ? 'disabled' : ''}
                     >
-                        {submitting ? 'Adding...' : 'タスクを追加'}
+                        {submitting ? 'Adding...' : '夢を追加'}
                     </Button>
                 </InputGroup.Append>
             </InputGroup>
